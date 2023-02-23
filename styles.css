@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-container {
+    background-image: url('./images/bg-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);
+    min-height: 100vh;
+    padding-inline: 3rem;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1180px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+img.logo {
+    width: 100%;
+    max-width: 280px;
+    padding: 2rem 2rem 1rem 0;
+}
+
+.main-container {
+    display: grid;
+    min-height: 74vh;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+img.main-img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+
+.heading {
+    margin-top: -6rem;
+}
+
+.heading p {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 2.5rem;
+}
+
+a.btn {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    padding: .6rem 2.5rem;
+    border-radius: 2rem;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 0 4px 10px 1px rgba(17, 17, 17, 0.53);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -2rem;
+    padding-bottom: 1rem;
+}
+
+a.social {
+    color: white;
+    text-decoration: none;
+    margin: 0 .5rem;
+    border: 1px solid white;
+    padding: .5rem .7rem;
+    border-radius: 50%;
+}
+
+a.btn:hover,
+a.btn:focus {
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+a.social:hover,
+a.social:focus {
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+    transition: all .3s ease-in-out;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 900px) {
+    .heading {
+        margin-top: -2.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    body {
+        text-align: center;
+    }
+
+    .bg-container {
+        background-image: url('./images/bg-mobile.svg');
+        padding-inline: 2.7rem;
+        min-height: 85vh;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        min-height: 40vh;
+    }
+
+    .heading {
+        margin-top: -2rem;
+    }
+
+    img.logo {
+        max-width: 200px;
+        display: flex;
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    a.btn {
+        padding-inline: 5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 5rem;
+        margin-right: 0;
+        padding-bottom: 2rem;
+    }
+
+}
